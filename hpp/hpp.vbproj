@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3BD3E62-1998-458B-B0B8-D5AE1B2D0EE4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>hpp.My.MyApplication</StartupObject>
+    <RootNamespace>hpp</RootNamespace>
+    <AssemblyName>hpp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>hpp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>hpp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MySql.Data, Version=6.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>obj\Debug\TempPE\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Laporan_Biaya_Tetap.Designer.vb">
+      <DependentUpon>Laporan_Biaya_Tetap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_Biaya_Tetap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CetakLaporan_kebutuhan_SK.Designer.vb">
+      <DependentUpon>CetakLaporan_kebutuhan_SK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CetakLaporan_kebutuhan_SK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cetak_hpp_menit.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cetak_hpp_menit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cetak_hpp_waktu_sk.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cetak_hpp_waktu_sk.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cetak_laporan_kebutuhan_SK.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cetak_laporan_kebutuhan_SK.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Detail_kebutuhan.Designer.vb">
+      <DependentUpon>Detail_kebutuhan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_kebutuhan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail_sk.Designer.vb">
+      <DependentUpon>Detail_sk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_sk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kebutuhan.Designer.vb">
+      <DependentUpon>Kebutuhan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kebutuhan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kebutuhan_produk.Designer.vb">
+      <DependentUpon>Kebutuhan_produk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kebutuhan_produk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kebutuhan_sk.Designer.vb">
+      <DependentUpon>Kebutuhan_sk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kebutuhan_sk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan.Designer.vb">
+      <DependentUpon>Laporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_Biaya_Variable.Designer.vb">
+      <DependentUpon>Laporan_Biaya_Variable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_Biaya_Variable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_jumlah_produk.Designer.vb">
+      <DependentUpon>Laporan_jumlah_produk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_jumlah_produk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_kebutuhan_pekerja.Designer.vb">
+      <DependentUpon>Laporan_kebutuhan_pekerja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_kebutuhan_pekerja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan_sk.Designer.vb">
+      <DependentUpon>Laporan_sk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan_sk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Beranda.Designer.vb">
+      <DependentUpon>Beranda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Beranda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Make_up.Designer.vb">
+      <DependentUpon>Make_up.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Make_up.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\concrud.vb" />
+    <Compile Include="Pemasangan_accesoris.Designer.vb">
+      <DependentUpon>Pemasangan_accesoris.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pemasangan_accesoris.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pembuatan_stample.Designer.vb">
+      <DependentUpon>Pembuatan_stample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembuatan_stample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penyesetan_kulit.Designer.vb">
+      <DependentUpon>Penyesetan_kulit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Penyesetan_kulit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pemotongan_pola.Designer.vb">
+      <DependentUpon>Pemotongan_pola.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pemotongan_pola.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perakitan.Designer.vb">
+      <DependentUpon>Perakitan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Perakitan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perencanaan_gambar_pola.Designer.vb">
+      <DependentUpon>Perencanaan_gambar_pola.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Perencanaan_gambar_pola.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pewarnaan_handle.Designer.vb">
+      <DependentUpon>Pewarnaan_handle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pewarnaan_handle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Produk.Designer.vb">
+      <DependentUpon>Produk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Produk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proses_total_harga.Designer.vb">
+      <DependentUpon>Proses_total_harga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proses_total_harga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tambah_detail_kebutuhan_produk.Designer.vb">
+      <DependentUpon>Tambah_detail_kebutuhan_produk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tambah_detail_kebutuhan_produk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tambah_kebutuhan.Designer.vb">
+      <DependentUpon>Tambah_kebutuhan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tambah_kebutuhan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tambah_kebutuhan_produk.Designer.vb">
+      <DependentUpon>Tambah_kebutuhan_produk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tambah_kebutuhan_produk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tambah_kebutuhan_sk.Designer.vb">
+      <DependentUpon>tambah_kebutuhan_sk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tambah_kebutuhan_sk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tambah_produk.Designer.vb">
+      <DependentUpon>Tambah_produk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tambah_produk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Total_harga.Designer.vb">
+      <DependentUpon>Total_harga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Total_harga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TQC.Designer.vb">
+      <DependentUpon>TQC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TQC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ubah Kebutuhan.Designer.vb">
+      <DependentUpon>Ubah Kebutuhan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ubah Kebutuhan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ubah_kebutuhan_sk_produk.Designer.vb">
+      <DependentUpon>Ubah_kebutuhan_sk_produk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ubah_kebutuhan_sk_produk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ubah_detail_sk.Designer.vb">
+      <DependentUpon>Ubah_detail_sk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ubah_detail_sk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ubah_kebutuhan_produk.Designer.vb">
+      <DependentUpon>Ubah_kebutuhan_produk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ubah_kebutuhan_produk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ubah_produk.Designer.vb">
+      <DependentUpon>Ubah_produk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ubah_produk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CetakLaporan_kebutuhan_SK.resx">
+      <DependentUpon>CetakLaporan_kebutuhan_SK.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cetak_hpp_menit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cetak_hpp_menit.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cetak_hpp_waktu_sk.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cetak_hpp_waktu_sk.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cetak_laporan_kebutuhan_SK.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cetak_laporan_kebutuhan_SK.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail_kebutuhan.resx">
+      <DependentUpon>Detail_kebutuhan.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail_sk.resx">
+      <DependentUpon>Detail_sk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kebutuhan.resx">
+      <DependentUpon>Kebutuhan.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kebutuhan_produk.resx">
+      <DependentUpon>Kebutuhan_produk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kebutuhan_sk.resx">
+      <DependentUpon>Kebutuhan_sk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan.resx">
+      <DependentUpon>Laporan.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_Biaya_Tetap.resx">
+      <DependentUpon>Laporan_Biaya_Tetap.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_Biaya_Variable.resx">
+      <DependentUpon>Laporan_Biaya_Variable.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_jumlah_produk.resx">
+      <DependentUpon>Laporan_jumlah_produk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_kebutuhan_pekerja.resx">
+      <DependentUpon>Laporan_kebutuhan_pekerja.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_sk.resx">
+      <DependentUpon>Laporan_sk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Beranda.resx">
+      <DependentUpon>Beranda.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Make_up.resx">
+      <DependentUpon>Make_up.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\hpp.Beranda.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Detail_kebutuhan.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Detail_sk.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Kebutuhan.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Kebutuhan_produk.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Kebutuhan_sk.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Laporan.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Laporan_jumlah_produk.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Laporan_kebutuhan_pekerja.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Login.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Make_up.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Pemasangan_accesoris.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Pembuatan_stample.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Pemotongan_pola.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Penyesetan_kulit.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Perakitan.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Perencanaan_gambar_pola.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Pewarnaan_handle.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Produk.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Tambah_detail_kebutuhan_produk.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Tambah_kebutuhan.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Tambah_kebutuhan_produk.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Tambah_produk.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.TQC.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Ubah_detail_sk.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Ubah_Kebutuhan.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Ubah_kebutuhan_produk.resources" />
+    <EmbeddedResource Include="obj\Debug\hpp.Ubah_produk.resources" />
+    <EmbeddedResource Include="Pemasangan_accesoris.resx">
+      <DependentUpon>Pemasangan_accesoris.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembuatan_stample.resx">
+      <DependentUpon>Pembuatan_stample.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penyesetan_kulit.resx">
+      <DependentUpon>Penyesetan_kulit.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pemotongan_pola.resx">
+      <DependentUpon>Pemotongan_pola.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perakitan.resx">
+      <DependentUpon>Perakitan.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perencanaan_gambar_pola.resx">
+      <DependentUpon>Perencanaan_gambar_pola.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pewarnaan_handle.resx">
+      <DependentUpon>Pewarnaan_handle.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produk.resx">
+      <DependentUpon>Produk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proses_total_harga.resx">
+      <DependentUpon>Proses_total_harga.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tambah_detail_kebutuhan_produk.resx">
+      <DependentUpon>Tambah_detail_kebutuhan_produk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tambah_kebutuhan.resx">
+      <DependentUpon>Tambah_kebutuhan.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tambah_kebutuhan_produk.resx">
+      <DependentUpon>Tambah_kebutuhan_produk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tambah_kebutuhan_sk.resx">
+      <DependentUpon>tambah_kebutuhan_sk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tambah_produk.resx">
+      <DependentUpon>Tambah_produk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Total_harga.resx">
+      <DependentUpon>Total_harga.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TQC.resx">
+      <DependentUpon>TQC.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ubah Kebutuhan.resx">
+      <DependentUpon>Ubah Kebutuhan.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ubah_kebutuhan_sk_produk.resx">
+      <DependentUpon>Ubah_kebutuhan_sk_produk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ubah_detail_sk.resx">
+      <DependentUpon>Ubah_detail_sk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ubah_kebutuhan_produk.resx">
+      <DependentUpon>Ubah_kebutuhan_produk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ubah_produk.resx">
+      <DependentUpon>Ubah_produk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\hpp.vshost.exe.manifest" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\Kebutuhan.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="obj\Debug\hpp.vbproj.GenerateResource.Cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\hpp.exe" />
+    <Content Include="bin\Debug\hpp.pdb" />
+    <Content Include="bin\Debug\hpp.vshost.exe" />
+    <Content Include="bin\Debug\hpp.xml" />
+    <Content Include="obj\Debug\hpp.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <None Include="Resources\870169-500x352.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

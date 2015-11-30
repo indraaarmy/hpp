@@ -1,0 +1,12 @@
+QUERY FORM PRODUK
+
+
+SELECT p.id_produk, p.nama_produk, ks.waktu FROM produk p LEFT JOIN kebutuhan_produk kp ON p.id_produk = kp.id_produk LEFT JOIN kebutuhan_sk ks ON kp.id_kebutuhan_produk = ks.id_kebutuhan_produk
+
+
+
+SELECT p.id_produk, p.nama_produk, kp.id_kebutuhan_produk, ks.id_kebutuhan_sk, ks.waktu 
+FROM produk p, kebutuhan_produk kp, kebutuhan_sk ks 
+WHERE p.id_produk = 5
+AND p.id_produk = kp.id_produk 
+AND kp.id_kebutuhan_produk = ks.id_kebutuhan_produk
