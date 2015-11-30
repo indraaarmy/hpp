@@ -3,7 +3,7 @@
 
 Module concrud
     Public Function mysqlkoneksi() As MySqlConnection
-        Return New MySqlConnection("server=localhost;database=hpp;uid=root")
+        Return New MySqlConnection("server=localhost;database=hpp;uid=root;password=root")
     End Function
 
     Public konek As MySqlConnection = mysqlkoneksi()
